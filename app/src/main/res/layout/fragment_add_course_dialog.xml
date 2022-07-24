@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:background="#F60808"
+        android:gravity="center"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="#F30B0B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Course" />
+
+    <!--Edit text to enter course name-->
+    <EditText
+        android:id="@+id/EdtCourseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter course Name" />
+
+    <!--edit text to enter course duration-->
+    <EditText
+        android:id="@+id/EdtCourseDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Course Duration" />
+
+    <!--edit text to display course tracks-->
+    <EditText
+        android:id="@+id/EdtCourseTracks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Course Tracks" />
+
+
+    <!--edit text for course Money-->
+    <EditText
+        android:id="@+id/EdtCourseMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Course Money" />
+
+    <!--button for adding new course-->
+    <Button
+        android:id="@+id/btnSaveCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Add Course"
+        android:textAllCaps="false" />
+
+    <!--Button for reading your course to database-->
+    <Button
+        android:id="@+id/btnCancelCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:visibility="visible" />
+
+</LinearLayout>

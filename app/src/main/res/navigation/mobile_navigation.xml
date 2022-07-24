@@ -22,4 +22,14 @@
         android:name="com.oshnisoft.bottomnavrealm.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_course"
+        android:name="com.oshnisoft.bottomnavrealm.ui.course.CourseFragment"
+        android:label="@string/title_course"
+        tools:layout="@layout/fragment_course" />
+    <fragment
+        android:id="@+id/navigation_task"
+        android:name="com.oshnisoft.bottomnavrealm.ui.task.TaskFragment"
+        android:label="@string/title_task"
+        tools:layout="@layout/fragment_task" />
 </navigation>
