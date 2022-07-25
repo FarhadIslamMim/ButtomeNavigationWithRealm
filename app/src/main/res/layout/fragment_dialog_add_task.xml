@@ -102,6 +102,20 @@
                     android:textColor="@color/md_black_1000"
                     app:drawableStartCompat="@drawable/ic_calendar"
                     android:drawablePadding="@dimen/_5sdp"/>
+                <EditText
+                    android:id="@+id/txtTaskName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_2sdp"
+                    android:textStyle="normal"
+                    android:gravity="center|start"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_8ssp"
+                    android:hint="Task Name"
+                    android:textColor="@color/md_black_1000"
+                    app:drawableStartCompat="@drawable/ic_task"
+                    android:drawablePadding="@dimen/_5sdp"/>
 
             </LinearLayout>
         </LinearLayout>

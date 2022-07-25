@@ -40,6 +40,8 @@ public class AddTaskDialogFragment extends DialogFragment {
     EditText txtTime;
     @BindView((R.id.txtDate))
     EditText txtDate;
+    @BindView((R.id.txtTaskName))
+    EditText txtTaskName;
 
     @Inject
     Realm r;
@@ -116,14 +118,28 @@ public class AddTaskDialogFragment extends DialogFragment {
                     if (!TextUtils.isEmpty(txtName.getText())) {
                         name = txtName.getText().toString();
                     }
-                    String location = txtLocation.getText().toString();
-                    String time = txtTime.getText().toString();
-                    String date = txtDate.getText().toString();
+                    String location ="";
+                    if (!TextUtils.isEmpty(txtLocation.getText())) {
+                        location = txtLocation.getText().toString();
+                    }
+                    String time ="";
+                    if (!TextUtils.isEmpty(txtTime.getText())) {
+                        time = txtTime.getText().toString();
+                    }
+                    String date ="";
+                    if (!TextUtils.isEmpty(txtDate.getText())) {
+                        date = txtDate.getText().toString();
+                    }
+                    String taskname ="";
+                    if (!TextUtils.isEmpty(txtTaskName.getText())) {
+                        taskname = txtTaskName.getText().toString();
+                    }
                     Task task = new Task();
                     task.setName(name);
                     task.setLocation(location);
                     task.setTime(time);
                     task.setDate(date);
+                    task.setTasks(taskname);
                     realm.insertOrUpdate(task);
                     alertDialog.dismiss();
                 }
@@ -133,7 +149,27 @@ public class AddTaskDialogFragment extends DialogFragment {
     public boolean isValidate(){
         if(TextUtils.isEmpty(txtName.getText())){
             //ToastUtils.longToast("Please input amount to expense!!");
-            Toast.makeText(context, "Please Enter Name And PhoneNumber", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Please Enter Name", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(TextUtils.isEmpty(txtLocation.getText())){
+            //ToastUtils.longToast("Please input amount to expense!!");
+            Toast.makeText(context, "Please Enter Location", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(TextUtils.isEmpty(txtTime.getText())){
+            //ToastUtils.longToast("Please input amount to expense!!");
+            Toast.makeText(context, "Please Enter Time", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(TextUtils.isEmpty(txtDate.getText())){
+            //ToastUtils.longToast("Please input amount to expense!!");
+            Toast.makeText(context, "Please Enter Date", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(TextUtils.isEmpty(txtTaskName.getText())){
+            //ToastUtils.longToast("Please input amount to expense!!");
+            Toast.makeText(context, "Please Enter Task", Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;

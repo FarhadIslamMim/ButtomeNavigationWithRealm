@@ -32,6 +32,7 @@ public class Task extends RealmObject implements IItem<Task, Task.ViewHolder> {
     private String location;
     private String time;
     private String date;
+    private String tasks;
 
     @Ignore
     private Object tag;// defines if this item is isSelectable
@@ -121,6 +122,14 @@ public class Task extends RealmObject implements IItem<Task, Task.ViewHolder> {
         this.date = date;
     }
 
+    public String getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(String tasks) {
+        this.tasks = tasks;
+    }
+
     @Override
     public int getType() {
         return R.id.revList;
@@ -164,6 +173,7 @@ public class Task extends RealmObject implements IItem<Task, Task.ViewHolder> {
         holder.txtLocation.setText(location);
         holder.txtTime.setText(time+" Hours");
         holder.txtDate.setText(date);
+        holder.txtTask.setText(tasks);
         //holder.phoneNumber.setText(phone_number);
     }
 
@@ -174,6 +184,7 @@ public class Task extends RealmObject implements IItem<Task, Task.ViewHolder> {
         holder.txtLocation.setText(null);
         holder.txtTime.setText(null);
         holder.txtDate.setText(null);
+        holder.txtTask.setText(null);
         //holder.phoneNumber.setText(null);
 
     }
@@ -201,6 +212,7 @@ public class Task extends RealmObject implements IItem<Task, Task.ViewHolder> {
         TextView txtLocation;
         TextView txtDate;
         TextView txtTime;
+        TextView txtTask;
         //TextView phoneNumber;
         public ViewHolder(View itemView) {
             super(itemView);
@@ -209,6 +221,7 @@ public class Task extends RealmObject implements IItem<Task, Task.ViewHolder> {
             txtLocation                                         = itemView.findViewById(R.id.txtLocation);
             txtTime                                             = itemView.findViewById(R.id.txtTime);
             txtDate                                             = itemView.findViewById(R.id.txtDate);
+            txtTask                                             = itemView.findViewById(R.id.txtTaskName);
             //phoneNumber                                           = itemView.findViewById(R.id.txtPhoneNumber);
 
         }
