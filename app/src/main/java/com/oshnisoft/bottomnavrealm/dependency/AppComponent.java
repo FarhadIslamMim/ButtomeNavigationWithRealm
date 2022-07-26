@@ -9,6 +9,8 @@ import com.oshnisoft.bottomnavrealm.ui.course.AddCourseDialogFragment;
 import com.oshnisoft.bottomnavrealm.ui.course.CourseFragment;
 import com.oshnisoft.bottomnavrealm.ui.dashboard.AddDialogFragment;
 import com.oshnisoft.bottomnavrealm.ui.dashboard.DashboardFragment;
+import com.oshnisoft.bottomnavrealm.ui.home.AddHomeDialogFragment;
+import com.oshnisoft.bottomnavrealm.ui.home.HomeFragment;
 import com.oshnisoft.bottomnavrealm.ui.task.AddTaskDialogFragment;
 import com.oshnisoft.bottomnavrealm.ui.task.TaskFragment;
 
@@ -27,6 +29,8 @@ public interface AppComponent {
     void inject(AddTaskDialogFragment addTaskDialogFragment);
     void inject(AddCourseDialogFragment addCourseDialogFragment);
     void inject(CourseFragment courseFragment);
+    void inject(AddHomeDialogFragment addHomeDialogFragment);
+    void inject(HomeFragment homeFragment);
 
 
     final class Initializer {
