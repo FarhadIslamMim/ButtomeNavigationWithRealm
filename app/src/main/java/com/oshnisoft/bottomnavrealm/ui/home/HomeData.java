@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -29,6 +30,7 @@ public class HomeData extends RealmObject implements IItem<HomeData, HomeData.Vi
 
 
     private String name;
+    private long id;
 
 
     @Ignore
@@ -95,7 +97,13 @@ public class HomeData extends RealmObject implements IItem<HomeData, HomeData.Vi
         this.name = name;
     }
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
 
     @Override
     public int getType() {
@@ -169,12 +177,14 @@ public class HomeData extends RealmObject implements IItem<HomeData, HomeData.Vi
 
 
         TextView txtName;
+        ImageView ivDelete;
 
         //TextView phoneNumber;
         public ViewHolder(View itemView) {
             super(itemView);
 
             txtName                                             = itemView.findViewById(R.id.txtName);
+            ivDelete                                             = itemView.findViewById(R.id.ivDelete);
 
             //phoneNumber                                           = itemView.findViewById(R.id.txtPhoneNumber);
 

@@ -36,7 +36,7 @@
                     app:drawableStartCompat="@drawable/ic_person"
                     android:drawablePadding="@dimen/_5sdp"/>
                 <ImageView
-                    android:id="@+id/ivdelet"
+                    android:id="@+id/ivDelete"
                     android:layout_width="@dimen/_35sdp"
                     android:layout_height="@dimen/_20sdp"
                     android:src="@drawable/ic_delete"
