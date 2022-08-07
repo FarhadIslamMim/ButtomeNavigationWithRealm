@@ -30,7 +30,7 @@ public class App extends Application {
         context = getApplicationContext();
 
         //Prevent Screenshot Or Screen Recorder in Android by this method
-        setupActivityListener();
+        //setupActivityListener();
     }
 
 
